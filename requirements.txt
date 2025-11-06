@@ -1,0 +1,25 @@
+# Core dependencies
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-huggingface>=0.1.0
+
+# LLM and embeddings
+transformers>=4.40.0
+torch>=2.0.0
+accelerate>=0.20.0
+
+# Dataset and evaluation
+datasets>=2.14.0
+requests>=2.31.0
+
+# Code execution sandboxing
+docker>=6.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+tqdm>=4.65.0
+
+# Testing
+pytest>=7.4.0
