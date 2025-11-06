@@ -261,15 +261,14 @@ pip install datasets
 
 ## Performance
 
-Typical performance (on fallback dataset):
+Evaluation results on HumanEvalFix dataset (164 Python samples):
 
-| Model | pass@1 | Time per Task |
-|-------|--------|---------------|
-| Qwen 0.5B | 40-60% | ~10s |
-| GPT-4 | 80-100% | ~5s |
-| Claude Sonnet | 80-100% | ~5s |
+| Model | pass@1 | Tasks Passed | Time per Task |
+|-------|--------|--------------|---------------|
+| GPT-4o-mini | 89.63% | 147/164 | ~14s |
+| Qwen 0.5B | 0% | 0/164 | N/A* |
 
-*Note: Results vary based on task complexity*
+*Note: Qwen model incompatible with current implementation (requires tool binding support)*
 
 ## Future Improvements
 
