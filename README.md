@@ -268,7 +268,10 @@ Evaluation results on HumanEvalFix dataset (164 Python samples):
 | GPT-4o-mini | 89.63% | 147/164 | ~14s |
 | Qwen 0.5B | 0% | 0/164 | N/A* |
 
-*Note: Qwen model incompatible with current implementation (requires tool binding support)*
+*Note: Performance of open-source models (e.g., Qwen) and Anthropic Claude is to be tested and updated in this repository.*
+
+**Cost and Time Analysis for GPT-4o-mini:**
+OpenAI's gpt-4o-mini took approximately 2 hours to run over all 164 Python samples on a laptop with 2.9 GHz Quad-Core Intel Core i7 and 16 GB RAM, at a cost of ~$0.15 USD.
 
 ## Future Improvements
 
