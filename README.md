@@ -266,7 +266,6 @@ Evaluation results on HumanEvalFix dataset (164 Python samples):
 | Model | pass@1 | Tasks Passed | Time per Task |
 |-------|--------|--------------|---------------|
 | GPT-4o-mini | 89.63% | 147/164 | ~14s |
-| Qwen 0.5B | 0% | 0/164 | N/A* |
 
 *Note: Performance of open-source models (e.g., Qwen) and Anthropic Claude is to be tested and updated in this repository.*
 
@@ -275,12 +274,13 @@ OpenAI's gpt-4o-mini took approximately 2 hours to run over all 164 Python sampl
 
 ## Future Improvements
 
-- [ ] Add support for more LLM providers (Ollama, LLaMA)
-- [ ] Implement pass@k (k > 1) evaluation
-- [ ] Add visualization of agent reasoning process
-- [ ] Support for other programming languages
-- [ ] Enhanced sandboxing with resource monitoring
-- [ ] Caching of successful fixes
+- **Long-term performance monitoring**: Implement comprehensive monitoring systems including:
+  - Automated metrics tracking with threshold-based alerts for key metrics (pass@1 rate, execution success rate, fix quality scores) and trend analysis to detect performance degradation
+  - Human-in-the-loop feedback mechanisms where users can flag issues (e.g., incorrect fixes, introduced bugs) to trigger system investigation and build a dataset of challenging examples for model improvement
+
+- **Evaluation of internal validity**: Beyond the current pass@1 metric that measures "external validity" (accuracy against benchmarks), evaluate the "internal validity" of the agent's reasoning process. This includes assessing whether the agent correctly identifies root causes, whether reasoning steps are logically sound, whether explanations align with applied fixes, and whether understanding generalizes to similar bugs.
+
+- **Other improvements**: Add support for more LLM providers (Ollama, LLaMA), add visualization of agent reasoning process, enhanced sandboxing with resource monitoring, and support for other programming languages.
 
 ## References
 
